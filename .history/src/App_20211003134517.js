@@ -1,8 +1,8 @@
-import React from "react";
+import react from "react";
 
 function App() {
   return (
-    <div>
+    <div className="App">
       hii
     </div>
   );
