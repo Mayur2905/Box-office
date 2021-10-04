@@ -13,7 +13,7 @@ function App() {
     This is start page
     </Route>
     <Route>
-      <h1>404 Error!!!</h1>
+      404 Error!!!
     </Route>
     </Switch>;
   

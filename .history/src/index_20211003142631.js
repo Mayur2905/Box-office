@@ -7,10 +7,8 @@ import reportWebVitals from './reportWebVitals';
 
 ReactDOM.render(
 <BrowserRouter>
-  <App />
-</BrowserRouter>,
-document.getElementById('root')
-
+<App />,document.getElementById('root')
+ </BrowsreRouter>,
 );
 
 // If you want to start measuring performance in your app, pass a function

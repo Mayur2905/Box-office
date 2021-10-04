@@ -10,11 +10,9 @@ function App() {
     </Route>
 
     <Route exact path="/started">
-    This is start page
+    This is home page
     </Route>
-    <Route>
-      <h1>404 Error!!!</h1>
-    </Route>
+    
     </Switch>;
   
 }
