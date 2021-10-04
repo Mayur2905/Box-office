@@ -2,8 +2,7 @@ import React from "react";
 
 import { Switch,Route } from 'react-router-dom'
 import Navs from "./components/Navs";
-import Home from "./pages/Home";
-import Started from "./pages/Started";
+import Home from './src/pages/'
 
 function App() {
   return( 
@@ -11,16 +10,14 @@ function App() {
         <Navs />
       <Switch>
       <Route exact path="/">
-      <Home/>
+      This is home page
       </Route>
 
       <Route exact path="/started">
-      <Started/>
+      This is start page
       </Route>
       <Route>
-        <h1>
-          Page Not Found!! </h1>
-        <h1> 404 Error!!!</h1>
+        <h1>404 Error!!!</h1>
       </Route>
     </Switch>
     </div>

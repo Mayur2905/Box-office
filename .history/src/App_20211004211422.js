@@ -19,8 +19,8 @@ function App() {
       </Route>
       <Route>
         <h1>
-          Page Not Found!! </h1>
-        <h1> 404 Error!!!</h1>
+          Page Not Found!!
+          404 Error!!!</h1>
       </Route>
     </Switch>
     </div>
