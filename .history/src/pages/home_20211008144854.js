@@ -37,9 +37,9 @@ const Home = () => {
     if (results && results.length > 0) {
       return results[0].show ?results.map(item => (
         <div key={item.show.id}>{item.show.name}</div>
-      )) : results.map(item => (
+      )) : results.map(item.show.id) =>(
         <div key ={item.person.id}>{item.person.name} </div>
-      ));
+      )
     }
 
     return null;

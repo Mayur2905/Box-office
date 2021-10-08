@@ -28,18 +28,19 @@ const Home = () => {
     setSearchOption(ev.target.value)
   };
   console.log(searchOption);
-
   const renderResults = () => {
     if (results && results.length === 0) {
       return <div>No results</div>;
     }
 
     if (results && results.length > 0) {
-      return results[0].show ?results.map(item => (
-        <div key={item.show.id}>{item.show.name}</div>
-      )) : results.map(item => (
-        <div key ={item.person.id}>{item.person.name} </div>
-      ));
+      return (
+        <div>
+          {results.map(item => (
+            <div key={item.show.id}>{item.show.name}</div>
+          ))}
+        </div>
+      );
     }
 
     return null;
