@@ -1,15 +1,15 @@
 import React, { useState } from 'react';
-import MainPageLayout from '../components/MainPageLayout';
-import { apiGet } from '../misc/config';
-import ShowGrid from '../components/show/ShowGrid';
 import ActorGrid from '../components/actor/ActorGrid';
+import MainPageLayout from '../components/MainPageLayout';
+import ShowGrid from '../components/show/showGrid';
+import { apiGet } from '../misc/config';
 
 const Home = () => {
   const [input, setInput] = useState('');
   const [results, setResults] = useState(null);
-  const [searchOption, setSearchOption] = useState('shows');
+  const [searchOption,setSearchOption] = useState('shows');
 
-  const isShowsSearch = searchOption === 'shows';
+  const isShowsSearch = searchOption==='shows';
 
   const onSearch = () => {
     apiGet(`/search/${searchOption}?q=${input}`).then(result => {
@@ -26,10 +26,10 @@ const Home = () => {
       onSearch();
     }
   };
-
-  const onRadioChange = ev => {
-    setSearchOption(ev.target.value);
+  const onRadioChange = (ev) =>{
+    setSearchOption(ev.target.value)
   };
+  console.log(searchOption);
 
   const renderResults = () => {
     if (results && results.length === 0) {
@@ -37,10 +37,10 @@ const Home = () => {
     }
 
     if (results && results.length > 0) {
-      return results[0].show ? (
-        <ShowGrid data={results} />
-      ) : (
-        <ActorGrid data={results} />
+      return results[0].show ?(
+      <ShowGrid/>
+      ) :(
+      <ActorGrid/>      
       );
     }
 
@@ -51,36 +51,24 @@ const Home = () => {
     <MainPageLayout>
       <input
         type="text"
-        placeholder="Search for something"
+        placeholder="Searsch for something"
         onChange={onInputChange}
         onKeyDown={onKeyDown}
         value={input}
       />
-
       <div>
-        <label htmlFor="shows-search">
+        <label htmlFor="Show-search">
           Shows
-          <input
-            id="shows-search"
-            type="radio"
-            value="shows"
-            checked={isShowsSearch}
-            onChange={onRadioChange}
-          />
+          <input id="shows-search" type="radio" 
+          checked={isShowsSearch} value = "shows" onChange={onRadioChange}/>
         </label>
-
-        <label htmlFor="actors-search">
+      
+        <label htmlFor="Actors-search">
           Actors
-          <input
-            id="actors-search"
-            type="radio"
-            value="people"
-            checked={!isShowsSearch}
-            onChange={onRadioChange}
-          />
+          <input id="Actor-search"type="radio"
+          checked={!isShowsSearch} value="people" onChange={onRadioChange}/>
         </label>
       </div>
-
       <button type="button" onClick={onSearch}>
         Search
       </button>
