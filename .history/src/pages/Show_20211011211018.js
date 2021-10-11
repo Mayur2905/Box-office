@@ -21,7 +21,8 @@ const initialState ={
 }
 const Show = () => {
   const { id } = useParams();
-  const [{show,isLoding,error},dispatch]=useReducer(reducer,initialState);
+  const [state,dispatch]=useReducer(reducer,initialState);
+  console.log('state',state)
   useEffect(() => {
 
     let isMounted = true;
@@ -46,16 +47,16 @@ const Show = () => {
   }, [id]);
 
    console.log('show', show);
-  
+  console.log('isLoding',isLoding)
    // eslint-disable-next-line
-  if(isLoding){
-    return<div>Data is being loaded</div>
-  }
-  if(error)
-  {
-    return<div>Error Occured:{error}</div>
-  }
-  return <div>this is show page</div>;
+//   if(isLoding){
+//     return<div>Data is being loaded</div>
+//   }
+//   if(error)
+//   {
+//     return<div>Error Occured:{error}</div>
+//   }
+//   return <div>this is show page</div>;
  };
 
 export default Show;

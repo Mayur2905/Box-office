@@ -9,7 +9,7 @@ const reducer =(prevState,action)=>{
       return{isLoding:false,error:null,show:action.show}
     }
     case 'FATCH_FAILED':{
-      return {...prevState,isLoding:false,error:action.error}
+      return {...prevState,isLoding=false,error:action.error}
     }
     default:return prevState
   }
@@ -21,7 +21,7 @@ const initialState ={
 }
 const Show = () => {
   const { id } = useParams();
-  const [{show,isLoding,error},dispatch]=useReducer(reducer,initialState);
+
   useEffect(() => {
 
     let isMounted = true;
@@ -45,8 +45,7 @@ const Show = () => {
 
   }, [id]);
 
-   console.log('show', show);
-  
+  console.log('show', show);
    // eslint-disable-next-line
   if(isLoding){
     return<div>Data is being loaded</div>
@@ -56,6 +55,6 @@ const Show = () => {
     return<div>Error Occured:{error}</div>
   }
   return <div>this is show page</div>;
- };
+};
 
 export default Show;
