@@ -15,7 +15,7 @@ function App() {
       <Route exact path="/started">
       <Started/>
       </Route>
-      <Route exact path="/Show/:id">
+      <Route exact path="/Show/: id">
         <Show/>
       </Route>
       <Route>
