@@ -4,7 +4,6 @@ export async function apiGet(queryString) {
   const response = await fetch(`${API_BASE_URL}${queryString}`).then(r =>
     r.json()
   );
- 
-
+  throw new Error('Opps');
   return response;
 }

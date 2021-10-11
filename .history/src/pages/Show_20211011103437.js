@@ -11,21 +11,18 @@ const Show = () => {
 
   useEffect(() => {
 
-    let isMounted = true;
+    const isMounted = true;
     
     apiGet(`/shows/${id}?embed[]=seasons&embed[]=cast`)
     .then(results => {
 
-        if(isMounted){
+      setTimeout(()=>{
         setShow(results);
         setIsLoding(false);
-        }
-    
+      },2000)
     }).catch(err =>{
-      if(isMounted){
       setError(err.message);
       setIsLoding(false);
-      }
     });
 
     return()=>{

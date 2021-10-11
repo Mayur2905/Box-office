@@ -20,6 +20,7 @@ const Show = () => {
         setShow(results);
         setIsLoding(false);
         }
+      },2000);
     
     }).catch(err =>{
       if(isMounted){
