@@ -5,7 +5,6 @@ import ShowGrid from '../components/show/ShowGrid';
 import ActorGrid from '../components/actor/ActorGrid';
 import { useLastOuery } from '../misc/custom-hooks';
 import { RadioInputsWrapper, SearchButtonWrapper, SearchInput } from './Home.styled';
-import CustomRadio from '../components/CustomRadio';
 
 const Home = () => {
   const [input, setInput] = useLastOuery();
@@ -61,22 +60,28 @@ const Home = () => {
 
       <RadioInputsWrapper>
         <div>
-          <CustomRadio
-          label="Shows"
-          id="shows-search"
-          value="shows"
-          checked={isShowsSearch}
-          onChange={onRadioChange}
-          />
+        <label htmlFor="shows-search">
+          Shows
+          <input
+            id="shows-search"
+            type="radio"
+            value="shows"
+            checked={isShowsSearch}
+            onChange={onRadioChange}
+            />
+        </label>
         </div>
         <div>
-        <CustomRadio
-          label="Actors"
-          id="actors-search"
-          value="people"
-          checked={!isShowsSearch}
-          onChange={onRadioChange}
-          />
+        <label htmlFor="actors-search">
+          Actors
+          <input
+            id="actors-search"
+            type="radio"
+            value="people"
+            checked={!isShowsSearch}
+            onChange={onRadioChange}
+            />
+        </label>
         </div>
       </RadioInputsWrapper>
       <SearchButtonWrapper>
