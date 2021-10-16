@@ -63,7 +63,7 @@ const CustomRadio = ({label , ...restProps}) => {
           />
           <span/>
     </RadioWrapper>
-    );
-};
+    )
+}
 
 export default memo(CustomRadio);

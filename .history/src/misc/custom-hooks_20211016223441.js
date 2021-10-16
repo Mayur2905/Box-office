@@ -1,5 +1,4 @@
-/* eslint-disable no-console */
-import { useReducer, useEffect,useState,useRef ,useCallback} from 'react';
+import { useReducer, useEffect,useState,useRef } from 'react';
 import { apiGet } from './config';
 
 function showsReducer(prevState, action) {
@@ -42,11 +41,10 @@ export function useLastOuery(key='lastQuery') {
       
 
      });
-     const setPersistedInput =useCallback(newState=>{
+     const setPersistedInput =(newState)=>{
          setInput(newState);
          sessionStorage.setItem(key,JSON.stringify(newState))
-     },[key]);
-
+     }
      return[input,setPersistedInput];
 }
 const reducer = (prevState, action) => {

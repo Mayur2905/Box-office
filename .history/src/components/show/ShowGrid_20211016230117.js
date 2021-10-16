@@ -1,5 +1,5 @@
 /* eslint-disable react-hooks/rules-of-hooks */
-import React,{useCallback} from 'react';
+import React,{memo,useCallback} from 'react';
 import ShowCard from './ShowCard';
 
 import { FlexGrid } from '../styled';

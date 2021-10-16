@@ -4,7 +4,7 @@ import MainPageLayout from '../components/MainPageLayout';
 import { apiGet } from '../misc/config';
 import ShowGrid from '../components/show/ShowGrid';
 import ActorGrid from '../components/actor/ActorGrid';
-import { useLastOuery} from '../misc/custom-hooks';
+import { useLastOuery, useWhyDidYouUpdate } from '../misc/custom-hooks';
 import { RadioInputsWrapper, SearchButtonWrapper, SearchInput } from './Home.styled';
 import CustomRadio from '../components/CustomRadio';
 
@@ -50,6 +50,9 @@ const Home = () => {
   const onRadioChange = useCallback(   ev => {
   setSearchOption(ev.target.value);
 },[]);
+
+
+    useWhyDidYouUpdate('home',{ onInputChange,onKeyDown})
     
     return (
       <MainPageLayout>
