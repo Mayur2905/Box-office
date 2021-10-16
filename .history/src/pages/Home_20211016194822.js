@@ -6,7 +6,7 @@ import ActorGrid from '../components/actor/ActorGrid';
 import { useLastOuery } from '../misc/custom-hooks';
 
 const Home = () => {
-  const [input, setInput] = useLastOuery();
+  const [input, setInput] = useLastOuery('');
   const [results, setResults] = useState(null);
   const [searchOption, setSearchOption] = useState('shows');
 

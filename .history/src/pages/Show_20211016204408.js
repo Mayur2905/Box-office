@@ -1,8 +1,8 @@
+/* eslint-disable no-unused-vars */
 /* eslint-disable no-underscore-dangle */
-
 import React  from 'react';
 import { useParams } from 'react-router-dom';
-
+import { apiGet } from '../misc/config';
 import ShowMainData from '../components/show/ShowMainData';
 import Details from '../components/show/Details';
 import Seasons from '../components/show/Seasons';
