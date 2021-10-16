@@ -1,5 +1,4 @@
 import React from 'react';
-import { ThemeProvider } from 'styled-components';
 import { Switch, Route } from 'react-router-dom';
 
 import Home from './pages/Home';
@@ -16,7 +15,6 @@ const theme = {
 
 function App() {
   return (
-    <ThemeProvider theme={theme}>
     <Switch>
       <Route exact path="/">
         <Home />
@@ -34,7 +32,6 @@ function App() {
         <div>Not found</div>
       </Route>
     </Switch>
-    </ThemeProvider>
   );
 }
 

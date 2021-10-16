@@ -9,12 +9,13 @@ const LINKS = [
 
 const Navs = () => {
   const location = useLocation();
+  console.log('location',location)
   return (
     <div>
       <NavList>
         {LINKS.map(item => (
           <li key={item.to}>
-            <LinkStyled to={item.to} className={item.to ===location.pathname ? 'active':''}>{item.text}</LinkStyled>
+            <LinkStyled to={item.to}>{item.text}</LinkStyled>
           </li>
         ))}
       </NavList>
