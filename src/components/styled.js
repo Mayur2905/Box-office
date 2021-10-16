@@ -1,5 +1,4 @@
-/* eslint-disable no-unused-vars */
-import styled from "styled-components";
+import styled from 'styled-components';
 
 export const FlexGrid = styled.div`
   display: flex;
@@ -35,12 +34,12 @@ export const SearchCard = styled.div`
     margin: 0;
   }
 `;
+
 export const Star = styled.div`
   display: inline-block;
   width: 18px;
   height: 18px;
-  //background-color: #ffc806;
-  background-color: ${props=>(props.active? '#ffc806'  : '#ddd')};
+  background-color: ${props => (props.active ? '#ffc806' : '#ddd')};
   clip-path: polygon(
     50% 0%,
     61% 35%,
